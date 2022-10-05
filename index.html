@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+</head>
+<body class="theme1">
+  <div class="container">
+
+    <nav class="nav">
+      <div class="nav__logo">calc</div>
+      <div class="nav__toggleBtn">
+        <button class=" toggle active"></button>
+        <button class="toggle"></button>
+        <button class="toggle"></button>
+      </div>
+    </nav>
+    <div class="screen">
+      <input type="number " name="screen" id="screen">
+    </div>
+
+    <section class="keypad">
+      <div class="grid">
+        <button class="btn btn_num" id="7">7</button>
+        <button class="btn btn_num" id="8">8</button>
+        <button class="btn btn_num" id="9">9</button>
+         <button class="btn btn_rd" id="delete">DEL</button>
+         <button class="btn btn_num" id="4">4</button>
+         <button class="btn btn_num" id="5">5</button>
+         <button class="btn btn_num" id="6">6</button>
+         <button class="btn btn_operator" id="+">+</button>
+      <button class="btn btn_num" id="1">1</button>
+      <button class="btn btn_num" id="2">2</button>
+      <button class="btn btn_num" id="3">3</button>
+      <button class="btn btn_operator" id="-">-</button>
+      <button class="btn btn_num" id=".">.</button>
+      <button class="btn btn_num" id="0">0</button>
+      <button class="btn btn_operator" id="/">/</button>
+      <button class="btn btn_operator" id="mult">*</button>
+    </div>
+    <div class="grid-last">
+
+      <button class="btn btn_rd" id="reset">RESET</button>
+      <button class="btn btn_eq" id="=">=</button>
+    </div>
+
+    </section>
+  </div>
+</body>
+<script src="./js/app.js"></script>
+</html>

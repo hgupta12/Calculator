@@ -1,0 +1,290 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: 1s;
+}
+
+body .error {
+  position: absolute;
+  top: 2rem;
+  color: #d03f2f;
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+}
+
+.container {
+  width: 90%;
+  max-width: 20rem;
+  transition: all 1s;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  transition: all 1s;
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+}
+
+.nav__toggleBtn {
+  height: 1.5rem;
+  padding: 0 0.1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav__toggleBtn .toggle {
+  position: relative;
+  height: 1rem;
+  width: 1rem;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+.nav__toggleBtn .toggle::before {
+  content: attr(data-content);
+  position: relative;
+  font-size: 0.5rem;
+  top: -1.25rem;
+}
+
+.nav__toggleBtn::before {
+  content: 'Theme';
+  position: absolute;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  left: -2.5rem;
+  top: 6px;
+}
+
+.screen input {
+  height: 4rem;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  text-align: right;
+  padding: 0 5%;
+}
+
+.keypad {
+  border-radius: 5px;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.keypad .grid {
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  align-items: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.keypad .grid-last {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.keypad .grid-last .btn {
+  width: 100%;
+  max-width: none;
+}
+
+.keypad .btn {
+  height: 2.25rem;
+  width: 90%;
+  max-width: 3.5rem;
+  justify-self: center;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.25rem;
+}
+
+.keypad .btn_rd {
+  font-size: 0.75rem;
+}
+
+.keypad #mult {
+  padding-top: 0.75rem;
+}
+
+body.theme1 {
+  background: #3a4764;
+}
+
+body.theme1 .nav__logo {
+  color: white;
+}
+
+body.theme1 .nav__toggleBtn {
+  background: #232c43;
+}
+
+body.theme1 .nav__toggleBtn::before {
+  color: white;
+}
+
+body.theme1 .nav__toggleBtn .toggle::before {
+  color: white;
+}
+
+body.theme1 .nav__toggleBtn .active {
+  background: #d03f2f;
+}
+
+body.theme1 .screen input {
+  background: #182034;
+  color: white;
+}
+
+body.theme1 .keypad {
+  background: #232c43;
+}
+
+body.theme1 .keypad .btn {
+  background: #eae3dc;
+  color: #444b5a;
+  border-bottom: 3px solid #b4a597;
+}
+
+body.theme1 .keypad .btn_rd {
+  background: #637097;
+  color: white;
+  border-bottom: 3px solid #404e72;
+}
+
+body.theme1 .keypad .btn_eq {
+  background: #d03f2f;
+  color: white;
+  border-bottom: 3px solid #93261a;
+}
+
+body.theme2 {
+  background: #e6e6e6;
+}
+
+body.theme2 .nav__logo {
+  color: #1b2428;
+}
+
+body.theme2 .nav__toggleBtn {
+  background: #d1cccc;
+}
+
+body.theme2 .nav__toggleBtn::before {
+  color: #1b2428;
+}
+
+body.theme2 .nav__toggleBtn .toggle::before {
+  color: #1b2428;
+}
+
+body.theme2 .nav__toggleBtn .active {
+  background: #ca5502;
+}
+
+body.theme2 .screen input {
+  background: #ededed;
+  color: #1b2428;
+}
+
+body.theme2 .keypad {
+  background: #d1cccc;
+}
+
+body.theme2 .keypad .btn {
+  background: #e5e4e1;
+  color: #1b2428;
+  border-bottom: 3px solid #a69d91;
+}
+
+body.theme2 .keypad .btn_rd {
+  background: #377f86;
+  color: white;
+  border-bottom: 3px solid #1b5f65;
+}
+
+body.theme2 .keypad .btn_eq {
+  background: #ca5502;
+  color: white;
+  border-bottom: 3px solid #893901;
+}
+
+body.theme3 {
+  background: #160628;
+}
+
+body.theme3 .nav__logo {
+  color: #ffe53d;
+}
+
+body.theme3 .nav__toggleBtn {
+  background: #1d0934;
+}
+
+body.theme3 .nav__toggleBtn::before {
+  color: #ffe53d;
+}
+
+body.theme3 .nav__toggleBtn .toggle::before {
+  color: #ffe53d;
+}
+
+body.theme3 .nav__toggleBtn .active {
+  background: #00e0d1;
+}
+
+body.theme3 .screen input {
+  background: #1d0934;
+  color: #ffe53d;
+}
+
+body.theme3 .keypad {
+  background: #1d0934;
+}
+
+body.theme3 .keypad .btn {
+  background: #341c4f;
+  color: #ffe53d;
+  border-bottom: 3px solid #871c9c;
+}
+
+body.theme3 .keypad .btn_rd {
+  background: #58077d;
+  color: white;
+  border-bottom: 3px solid #bc15f4;
+}
+
+body.theme3 .keypad .btn_eq {
+  background: #00e0d1;
+  color: #1b2428;
+  border-bottom: 3px solid #6cf9f2;
+}
+/*# sourceMappingURL=style.css.map */
